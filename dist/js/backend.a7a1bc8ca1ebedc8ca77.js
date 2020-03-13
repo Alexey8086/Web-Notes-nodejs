@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/backend-interactions.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./backend-interactions.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/backend-interactions.js":
-/*!*************************************!*\
-  !*** ./src/backend-interactions.js ***!
-  \*************************************/
+/***/ "./backend-interactions.js":
+/*!*********************************!*\
+  !*** ./backend-interactions.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/backend-interactions.js?");
+eval("/* */\n\n//# sourceURL=webpack:///./backend-interactions.js?");
 
 /***/ })
 

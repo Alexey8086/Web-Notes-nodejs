@@ -1,79 +1,126 @@
 *{
-    /* background-color: rgb(24, 25, 29); */
+    /* background-color: rgb(41, 185, 53); */
     margin: 0;
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0.7em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(41, 42, 49);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(112, 110, 110);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(128, 126, 126);
+}
+
+::-webkit-scrollbar-button {
+    background-color: rgb(32, 33, 39);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+}
+
 /* SMARTPHONE */
 @media (min-width: 300px) and (max-width: 760px) { 
-
+    
     #parent_container {
         background-color: rgb(36, 36, 37);
-        min-height: 100vh;
-        width: 100vw;
-        padding: 1.6rem;
-        box-sizing: border-box;
-        color: rgb(197, 194, 194);
-
-        font-size: 1.3rem;/* 24px; */
-        font-family: monospace;
-        outline: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(100vh, max-content);
+        padding: 0.5rem;
     }
-
 
     #workspace_container {
-        display: none;
+        background-color: rgb(36, 36, 37);
+        display: grid;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+        margin-top: 10px;
+        outline: none;
+    }
+    
+    #editorjs {
+        border: none;
+        background-color: rgb(36, 36, 37);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        color: rgb(197, 194, 194);
+        font-size: 1.3rem;
+        font-family: monospace;
+        padding-top: 20px;
+
+        outline: none;
+        resize: none;
+        overflow: auto;
     }
 
-    #empty_left_column {
-        display: none;
-    }
 
-    #empty_right_column {
-        display: none;
-    }
-
-    #editor_sm {
-        display: none;
-    }
-
-    #parent_container>div {
+    .ce-toolbar--opened, .ce-block, .ce-block--focused {
         background-color: rgb(36, 36, 37);
     }
+
+    #empty_left_column, #empty_right_column {
+        display: none;
+    }
+
 }
 
 /* TABLET */
 @media (min-width: 761px) and (max-width: 1113px) {
+
     #parent_container {
-        background-color: rgb(36, 36, 37);
-        min-height: 100vh;
-        width: 100vw;
-        padding: 1.6rem;
-        box-sizing: border-box;
-        color: rgb(197, 194, 194);
-
-        font-size: 1.5rem;/* 24px; */
-        font-family: monospace;
-        outline: none;
+        background-color: rgb(24, 25, 29);
+        display: grid;
+        grid-template-columns: 0.2fr 3fr 0.2fr ;
+        grid-template-rows: minmax(100vh, max-content);
     }
-
 
     #workspace_container {
-        display: none;
+        background-color: rgb(36, 36, 37);
+        display: grid;
+        grid-template-columns: 100%;
+        box-sizing: border-box;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        margin-top: 20px;
+        outline: none;
+    }
+    
+    #editorjs {
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        background-color: rgb(36, 36, 37);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        color: rgb(197, 194, 194);
+        font-size: 1.5rem;
+        font-family: monospace;
+        padding-top: 20px;
+
+        outline: none;
+        resize: none;
+        overflow: auto;
     }
 
-    #empty_left_column {
-        display: none;
+    #empty_left_column, #empty_right_column {
+        background-color: rgb(24, 25, 29);
     }
 
-    #empty_right_column {
-        display: none;
-    }
-
-    #parent_container>div {
+    #editor>div {
         background-color: rgb(36, 36, 37);
     }
-
 }
 
 /* DESKTOP */
@@ -104,7 +151,7 @@
         height: 100%;
         box-sizing: border-box;
         color: rgb(197, 194, 194);
-        font-size: 1.5rem;/* 24px; */
+        font-size: 1.5rem;
         font-family: monospace;
         padding-top: 20px;
 
@@ -150,12 +197,12 @@
         box-sizing: border-box;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
+        padding-top: 35px;
         margin-top: 20px;
-        padding: 0px 25px 0px 25px;
         outline: none;
     }
     
-    #editor {
+    #editorjs {
         border: none;
         background-color: rgb(36, 36, 37);
         width: 100%;
@@ -164,7 +211,6 @@
         color: rgb(197, 194, 194);
         font-size: 1.5rem;
         font-family: monospace;
-        padding-top: 20px;
     
         outline: none;
         /*
@@ -173,7 +219,4 @@
         */
     }
 
-    #editor>div {
-        background-color: rgb(36, 36, 37);
-    }
 }

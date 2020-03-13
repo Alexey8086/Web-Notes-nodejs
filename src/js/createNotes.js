@@ -1,12 +1,14 @@
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/editorjs';
 import List from '@editorjs/editorjs';
+import '../styles/createNotes.css'
 
 const PARENT_CONTAINER = document.getElementById('parent_container')
 
 const editor = new EditorJS({
 
     tools: {
+        
         header: {
             class: Header, 
             inlineToolbar: ['link']

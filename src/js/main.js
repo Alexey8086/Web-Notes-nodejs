@@ -1,3 +1,5 @@
+import '../styles/main.css'
+
 let arr0 = []
 let arr1 = []
 let arr2 = []
